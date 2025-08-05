@@ -11,7 +11,6 @@ PromptSpark is an AI prompt manager web app that allows users to:
 
 - HTML/CSS/JS (or React, Node.js, etc.)
 - GitHub for version control
-- [Add any backend/API/DB if applicable]
 
 ## 🚀 How to Run Locally
 
@@ -20,4 +19,5 @@ git clone https://github.com/DUHITA1309/PromptSpark.git
 cd PromptSpark
 npm install
 npm start
+
 
