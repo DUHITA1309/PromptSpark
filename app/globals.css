@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-bg-light {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-bg-success {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.gradient-bg-warning {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+/* Category color classes */
+.category-writing {
+  @apply bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 border-purple-200;
+}
+.category-marketing {
+  @apply bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-800 border-blue-200;
+}
+.category-development {
+  @apply bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border-green-200;
+}
+.category-research {
+  @apply bg-gradient-to-r from-orange-100 to-yellow-100 text-orange-800 border-orange-200;
+}
+.category-creative {
+  @apply bg-gradient-to-r from-pink-100 to-rose-100 text-pink-800 border-pink-200;
+}
+.category-business {
+  @apply bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 border-indigo-200;
+}
+.category-education {
+  @apply bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-800 border-teal-200;
+}
+.category-general {
+  @apply bg-gradient-to-r from-gray-100 to-slate-100 text-gray-800 border-gray-200;
+}
+
+/* Usage count badges */
+.usage-low {
+  @apply bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700;
+}
+.usage-medium {
+  @apply bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700;
+}
+.usage-high {
+  @apply bg-gradient-to-r from-green-100 to-green-200 text-green-700;
+}
+.usage-very-high {
+  @apply bg-gradient-to-r from-yellow-100 to-orange-200 text-orange-700;
+}
+
+/* Animated gradients */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
